@@ -28,7 +28,7 @@ export default function Signup() {
 
     try {
       setIsSubmitting(true);
-      const res = await axios.post("http://localhost:8080/user/signup", formData, { withCredentials: true });
+      const res = await axios.post("https://nestivo-project-1.onrender.com/user/signup", formData, { withCredentials: true });
       setUser(res.data.user);
       setMessage(res.data.message);
       setFormData({
