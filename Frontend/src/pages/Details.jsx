@@ -17,7 +17,7 @@ const Details = () => {
         const fetchProperty = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://localhost:8080/property/${id}`, { withCredentials: true });
+                const response = await axios.get(`https://nestivo-project-1.onrender.com/property/${id}`, { withCredentials: true });
                 setProperty(response.data.property);
             } catch (err) {
                 toast.error(err);
@@ -30,7 +30,7 @@ const Details = () => {
 
     const handleDelete = async () => {
         console.log('delete triggered');
-        const res = await axios.delete(`http://localhost:8080/property/${id}`, { withCredentials: true });
+        const res = await axios.delete(`https://nestivo-project-1.onrender.com/property/${id}`, { withCredentials: true });
         navigate('/property');
         toast.success(res.data.message);
     }
