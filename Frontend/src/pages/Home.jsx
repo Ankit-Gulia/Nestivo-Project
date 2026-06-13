@@ -10,7 +10,7 @@ const Home = () => {
     useEffect(() => {
         const fetchProperties = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/property", { withCredentials: true });
+                const response = await axios.get("https://nestivo-project-1.onrender.com/property", { withCredentials: true });
                 setProperties(response.data.properties);
             }   catch (error) {
                 console.error("Error fetching properties:", error);
