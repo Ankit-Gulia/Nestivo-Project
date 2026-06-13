@@ -27,7 +27,7 @@ const Edit = () => {
     const fetchListing = async () => {
       try {
         setIsLoading(true);
-        const res = await axios.get(`http://localhost:8080/property/${id}`, { withCredentials: true });
+        const res = await axios.get(`https://nestivo-project-1.onrender.com/property/${id}`, { withCredentials: true });
 
         const property = res.data.property;
         setFormData({
@@ -82,7 +82,7 @@ const Edit = () => {
 
     try {
       setIsSubmitting(true);
-      const res = await axios.put(`http://localhost:8080/property/${id}`, data, { withCredentials: true });
+      const res = await axios.put(`https://nestivo-project-1.onrender.com/property/${id}`, data, { withCredentials: true });
       toast.success(res.data.message);
       navigate("/property");
     } catch (err) {
