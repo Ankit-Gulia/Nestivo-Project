@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
 
    const fetchUser = async() => {
-    await axios.get("http://localhost:8080/user/auth/check", { withCredentials: true })
+    await axios.get("https://nestivo-project-1.onrender.com/user/auth/check", { withCredentials: true })
       .then((res) => {
         if (res.data.isAuthenticated) {
           setUser(res.data.user); // user logged in
