@@ -31,7 +31,7 @@ const Review = ({ propertyId, reviews = [], onReviewCreated }) => {
         try {
             setSubmitting(true);
             const response = await axios.post(
-                `http://localhost:8080/property/${propertyId}/review`,
+                `https://nestivo-project-1.onrender.com/property/${propertyId}/review`,
                 formData,
                 { withCredentials: true }
             );
