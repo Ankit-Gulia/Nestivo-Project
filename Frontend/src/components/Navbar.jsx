@@ -15,7 +15,7 @@ const Navbar = () => {
   ];
 
   const handleLogout = async () => {
-    const response = await axios.post("http://localhost:8080/user/logout", {}, { withCredentials: true });
+    const response = await axios.post("https://nestivo-project-1.onrender.com/user/logout", {}, { withCredentials: true });
     toast.success(response.data.message);
     setUser(null);
   };
