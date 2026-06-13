@@ -12,7 +12,7 @@ function ProtectedRoute({ children }) {
   const location = useLocation();
 
   useEffect(() => {
-    axios.get("http://localhost:8080/user/auth/check", { withCredentials: true })
+    axios.get("https://nestivo-project-1.onrender.com/user/auth/check", { withCredentials: true })
       .then(res => {
         setIsAuth(res.data.isAuthenticated);
         setLoading(false);
