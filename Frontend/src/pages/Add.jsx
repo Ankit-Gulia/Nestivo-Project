@@ -51,7 +51,7 @@ const Add = () => {
 
     try {
       setIsSubmitting(true);
-      const res = await axios.post(`http://localhost:8080/property`, data, { withCredentials: true });
+      const res = await axios.post(`https://nestivo-project-1.onrender.com/property`, data, { withCredentials: true });
       toast.success(res.data.message);
       navigate("/property");
     } catch (err) {
