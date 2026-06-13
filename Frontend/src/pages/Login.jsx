@@ -32,7 +32,7 @@ export default function Login() {
 
     try {
       setIsSubmitting(true);
-      const res = await axios.post("http://localhost:8080/user/login", formData, { withCredentials: true });
+      const res = await axios.post("https://nestivo-project-1.onrender.com/user/login", formData, { withCredentials: true });
       toast.success(res.data.message);
       setUser(res.data.user);
       navigate(from, { replace: true });
